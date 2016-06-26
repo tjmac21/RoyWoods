@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>Roy Wood Work</title>
+       <link rel="stylesheet" href="css/style.css"/>
+	   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+       <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>	
+	   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+	<script>
+   
+<!----- JQUERY FOR SLIDING NAVIGATION --->   
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->   
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           return false;
+         });
+      }
+    }
+  });
+
+});
+
+
+</script>
+
+
+ </head> 
+	
+<body>
+<!----- HEADER START--->   
+<header id="header">
+<div class="content">
+<div id="logo"><a href=""> Roy Wood Work </a></div>
+
+<nav id="nav">
+	<ul>
+		<li><a href="#slide1" class="active" title="Next Section" ></li>
+		<li><a href="#slide2" title="Next Section">About</a></li>
+		<li><a href="#slide3" title="Next Section">Model 1</a></li>
+		<li><a  href="#slide4" title="Next Section">Model 2</a></li>
+		<li><a href="#slide5" title="Next Section">Contact</a></li>
+	</ul>
+</nav>
+</div>
+</header>	
+<!----- HEADER END--->   
+
+<!----- SLIDES START --->   	
+	<div id="slide1">
+		<div class="content">
+			<h2>ROY</h2>
+		    <h1>WOOD WORK</h1>
+		</div> 
+    </div> 
+
+	<div id="slide2">
+		<div class="content" >
+			<img align="left" style="width: 40%;" src="img/logo.jpg"/>
+			<img align="right" style="height: 80%;"src="img/roy.png"/>
+		</div> 
+    </div> 
+	
+	
+   <div id="slide3">
+		<div class="content">
+			   <div class="quotes_container">
+		       <h2>“Every furniture has a soul” </h2>
+			   </div>
+			   <h3 class="quotes">We create more than just a table. We create art. Established in Montreal, we offer a service for handmade furniture.</h3>
+		</div> 
+    </div> 
+	
+	
+	<div id="slide4">
+		<div class="content">
+			
+			<div class="quotes_container">
+				<h3 class="quotes">“Every child is an artist. The problem is how to remain an artist once he grows up.”</h3>
+				<img style="width: 10%;" src="img/picasso.jpg" align="left"/> <h4 class="author_name_gray">Pablo Picasso </h4>
+			</div> 
+		</div> 
+    </div> 
+	
+	
+	<div id="slide5">
+		<div class="content">
+			<div class="quotes_container">
+				<h3 class="quotes">Phone: (514) 742-4361</h3>
+				<h3 class="quotes">Email: yann.chapdelaine-roy@hec.ca</h3>
+				<!-- Instagram // Facebook -->
+			</div>  
+		</div> 
+		
+
+    </div> 
+	
+<!----- SLIDES END --->
+
+</body>
+</html>
